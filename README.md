@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # kickstart.nvim
 
 ## Introduction
@@ -214,3 +215,6 @@ choco install -y neovim git ripgrep wget fd unzip gzip mingw make
 ```
 
 Then continue with the [Install Kickstart](#Install-Kickstart) step.
+=======
+# Neovim-Config
+>>>>>>> bada90e6f72f94f8a02be7081b6a2a7765a15573
