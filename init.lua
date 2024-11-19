@@ -92,7 +92,7 @@ vim.g.maplocalleader = ' '
 
 vim.wo.relativenumber = true
 -- Set to true if you have a Nerd Font installed
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`
@@ -198,6 +198,8 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
 --  See `:help vim.highlight.on_yank()`
+--
+
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
   group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
@@ -664,8 +666,8 @@ require('lazy').setup({
     end,
   },
   {
-"tpope/vim-fugitive",
-cmd = "Git"
+    'tpope/vim-fugitive',
+    cmd = 'Git',
   },
 
   {
@@ -900,3 +902,11 @@ cmd = "Git"
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+--
+--
+
+vim.api.nvim_create_autocmd('VimEnter', {
+  callback = function()
+    print 'Welcome to Neovim!'
+  end,
+})
